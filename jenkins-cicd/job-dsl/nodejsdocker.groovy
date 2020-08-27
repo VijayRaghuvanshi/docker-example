@@ -14,7 +14,7 @@ job('NodeJS Docker Job') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName('vijayraghuvanshi/docker-nodejs-demo')
+            repositoryName('vijayraghuvanshi/docker-example')  //docker hub repo where image will be published
             tag('${GIT_REVISION,length=9}')
             registryCredentials('dockerhub')
             forcePull(false)
